@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title> SIT120 Task 1.3</title>
+    <link rel="stylesheet" href="practical1.css">
+
+    <style>
+        p {
+            color: blue;
+            text-align: left;
+
+        }
+    </style>
+
+</head>
+
+<script>
+    function CalculateWam() {
+
+
+
+        // get the marks
+
+        var sit110 = document.getElementById('SIT110').value;
+        var sit113 = document.getElementById('SIT113').value;
+        var sit120 = document.getElementById('SIT120').value;
+        var sit103 = document.getElementById('SIT103').value;
+
+        // add the marks with (using double notation technique) as javascript views var as strings NOT numbers
+
+        var totalMarks = sit110 - (- sit113) - (- sit120) - (- sit103);
+
+
+        // calculate WAM 
+        var wam = totalMarks / 4;
+
+        document.getElementById('DisplayWam').value = wam;
+
+
+    }
+
+</script>
+
+<body>
+
+
+
+    <body>
+
+        <h2>Display Date and Time</h2>
+
+        <button type="button" onclick="document.getElementById('D&T').innerHTML = Date()">
+            Click this button to show the current Date and time.</button>
+        <p id="D&T"></p>
+
+       
+        <form>
+            <h1> Student Details</h1>
+            <label for="StudentNumber">Student Number :</label><br>
+            <input type="number" id="StudentNumber" name="StudentNumber" value="220132587"><br>
+            <label for="StudentName">Student Name:</label><br>
+            <input type="text" id="StduentName" name="StudentName" value="Steve Gates">
+            <br>
+
+            <p> Enter the students result in the input boxes below: </p>
+            <table>
+
+                <tr>
+                    <td>SIT110</td>
+                    <td><input type="number" id="SIT110"></td>
+                </tr>
+                <tr>
+                    <td>SIT113</td>
+                    <td><input type="number" id="SIT113"></td>
+                </tr>
+                <tr>
+                    <td>SIT120</td>
+                    <td><input type="number" id="SIT120"></td>
+                </tr>
+                <tr>
+                    <td>SIT103</td>
+                    <td><input type="number" id="SIT103"></td>
+                </tr>
+
+            </table>
+
+            <br>
+            <input type="button" value="Calculate WAM" onClick="CalculateWam();">
+            <br>
+            <br>
+
+            <label for="DisplayWam">WAM:</label><br>
+            <input type="number" id="DisplayWam" readonly><br>
+
+        </form>
+
+
+
+
+
+    </body>
+
+</html>
+</body>
+
+</html>
