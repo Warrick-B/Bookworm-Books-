@@ -1,1 +1,1 @@
-# SIT120
+# SIT120 Weekly Rolling Portfolio
