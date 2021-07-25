@@ -1,0 +1,25 @@
+/* selects all elements*/
+* {
+  box-sizing: border-box;
+}
+
+/* Column Divisions apply the following styles*/
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 600px;
+}
+
+/* Body apply the following styles*/
+body {
+  background-color:lightgray;
+}
+
+
+/* Heading 1 apply the following styles*/
+h1 {
+  color:red;
+  margin-left: 10px;
+
+}
