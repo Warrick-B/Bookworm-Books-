@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> Week3 Task 2</title>
+
+    
+</head>
+
+<body>
+    <h2>String length.</h2>
+
+    <p>What is 10 x 5 ?</p>
+    
+    <p id="number"></p>
+  
+    <script>
+          function number () {
+            let ten = 10;
+            let five = 5;
+            let sum = ten * five;
+
+            document.getElementById("number").innerHTML = sum;
+        }
+
+        function array(){
+
+            const motorbikes = ["yamaha", "kawasaki", "honda", "suzuki"];
+            document.getElementById("array").innerHTML = motorbikes;
+
+        }
+
+        function toPrecision(){
+
+            let y = 3.14159;
+            document.getElementById("toPrecision").innerHTML =
+                y.toPrecision() + "<br>" +
+                y.toPrecision(3) + "<br>" +
+                y.toPrecision(4) + "<br>" +
+                y.toPrecision(5);
+        }
+
+    
+
+      
+    </script>
+
+
+    <button style="background-color: black; color: white;" onclick="number()">Calculate</button> 
+    <br>
+
+
+
+
+
+    <h2>Motorbike Array</h2>
+
+    <p id="array"></p>
+    
+    <button style="background-color: black; color: white;" onclick="array()">Calculate</button> 
+
+
+    <h2>toPrecision method returns a string ( that is a number ) to a specific length</h2>
+
+    <p id="toPrecision"></p>
+    
+    <button style="background-color: black; color: white;" onclick="toPrecision()">Calculate</button> 
+    
+
+
+
+    </body>
+    </html>
+    
+    

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> Week3 Task 2</title>
+
+
+</head>
+
+<body>
+    <h2>Get Time.</h2>
+
+    <p>The internal clock in JavaScript starts at midnight January 1, 1970.</p>
+    <p>Click the button to display the number of milliseconds since midnight, January 1, 1970.</p>
+
+    <p id="time"></p>
+
+    <script>
+        function myFunction() {
+            var d = new Date();
+            var n = d.getTime();
+            document.getElementById("time").innerHTML = n;
+        }
+    </script>
+
+    <button style="background-color: black; color: white;" onclick="myFunction()">Calculate</button>
+
+
+
+</body>
+
+</html>
