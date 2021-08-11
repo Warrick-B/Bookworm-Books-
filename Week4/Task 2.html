@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> Vue Conditionals</title>
+
+
+</head>
+
+<body>
+
+<div id="display">
+    <span v-if="visable">This will be shown when it is true</span>
+    <br>
+    <br>
+    <span v-if="non-visable">This will NOT be shown when it is false</span>
+    <span v-else>The above sentence is not visable</span>
+    <br>
+    <span v-show="true">This will be seen as it is set to true</span>
+</div>
+
+<div id="forloop">
+    <ul>
+      <li v-for="unit in units">
+        {{ unit.code }}
+      </li>
+    </ul>
+  </div>
+  
+
+
+</body>
+
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="app2.js"></script>
+
+</html>
