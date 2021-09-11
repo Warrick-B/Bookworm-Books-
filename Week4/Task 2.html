@@ -4,32 +4,27 @@
 
 <head>
     <title> Vue Conditionals</title>
-
-
 </head>
 
 <body>
 
 <div id="display">
-    <span v-if="visable">This will be shown when it is true</span>
+    <span v-if="visable">This will be shown when it is true</span> <!--this will be shown-->
     <br>
     <br>
-    <span v-if="non-visable">This will NOT be shown when it is false</span>
+    <span v-if="non-visable">This will NOT be shown when it is false</span> <!--this will not be shown-->
     <span v-else>The above sentence is not visable</span>
     <br>
-    <span v-show="true">This will be seen as it is set to true</span>
+    <span v-show="true">This will be seen as it is set to true</span> <!--this will be shown-->
 </div>
 
 <div id="forloop">
     <ul>
-      <li v-for="unit in units">
+      <li v-for="unit in units">  <!--display every unit code in array of units-->
         {{ unit.code }}
       </li>
     </ul>
   </div>
-  
-
-
 </body>
 
   <!-- development version, includes helpful console warnings -->

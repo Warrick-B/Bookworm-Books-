@@ -4,33 +4,27 @@
 
 <head>
     <title> Vue Introduction</title>
-
-
 </head>
 
 <body>
-
     <div id="app">
-        {{ message }}
+        {{ message }} <!--Vue message data will be displayed here-->
 
         <p>
-            {{name}}
+            {{name}} <!--Vue name data will be displayed here-->
         </p>
 
-        <p v-html="htmlrendering">
+        <p v-html="htmlrendering"> <!-- htmlrendering data will be displayed here-->
 
         </p>
 
-        <p v-html="htmlheading1">
+        <p v-html="htmlheading1"> <!-- htmlheading1 data will be displayed here-->
 
         </p>
         <p>
-        <img v-img="books" src="star.png">
-    </p>
+        <img v-img="star" src="star.png"> <!--image to be rendered-->
+        </p>
       </div>
-
-  
-
 
 </body>
 
