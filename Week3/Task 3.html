@@ -4,7 +4,7 @@
 
 <head>
     <title> Week3 Task 2</title>
-
+    <meta charset="utf-8" /> <!-- telling browser to use UTF-8 character encoding -->
 
 </head>
 
@@ -17,14 +17,53 @@
     <p id="time"></p>
 
     <script>
-        function myFunction() {
+
+        //getTime is a get method to fetch time
+        function currentTime() {
             var d = new Date();
             var n = d.getTime();
-            document.getElementById("time").innerHTML = n;
+            document.getElementById("time").innerHTML = n; //display in HTML
         }
+
+
+        //define person object 
+        const person = {
+            firstname: 'Jack',
+            lastname: 'Ryan',
+
+            //get method to acccess the fullname
+            get fullname() {
+                return `${person.firstname} ${person.lastname}`
+            },
+
+            //set method to change the name
+            set fullname(name) {
+                const parts = name.split(' ');
+                this.firstname = parts[0];
+                this.lastname = parts[1];
+
+            }
+
+        };
+        person.fullname = 'John Smith'
+
+        //getter => access properties
+        //setter ==> change properties
+
+        console.log(person); // log object in colnsole
+
+        console.log('Using GetFullYear method') //logging date
+        const date = new Date(); {
+            date.setFullYear(1999) //set methods
+            date.setHours(13)
+
+            console.log(date);
+            console.log('GetFullYear: ', date.getFullYear()); //get method
+        }
+
     </script>
 
-    <button style="background-color: black; color: white;" onclick="myFunction()">Calculate</button>
+    <button style="background-color: black; color: white;" onclick="currentTime()">Calculate</button>
 
 
 

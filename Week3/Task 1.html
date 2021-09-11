@@ -5,28 +5,53 @@
 <head>
     <title> Week3 Task 1</title>
 
-    
+
 </head>
 
 <body>
     <h2>String length.</h2>
 
     <p>What is the length of the word Yamaha?</p>
-    
+
     <p id="Motorbike"></p>
+
+    <button style="background-color: black; color: white;" onclick="length()">Calculate</button>
+
+    <br>
+
+    <h2>Replace String.</h2>
+
+    <p id="Dymocks">Please visit Dymocks</p>
+
+    <button style="background-color: black; color: white;" onclick="replace()">Replace</button>
+
+    <h2>Uperrcase.</h2>
+
+    <p id="Uppercase">bookworm books</p>
+
+    <button style="background-color: black; color: white;" onclick="uppercase()">Make Uppercase</button>
+
     <script>
         function length() {
             let manufacturer = "Yamaha"; //Should display 6 as there is 6 letters in the manufacturer variable (yamaha)
             document.getElementById("Motorbike").innerHTML = manufacturer.length;
         }
-        
+
+        function replace() {
+            let text = document.getElementById("Dymocks").innerHTML;
+            document.getElementById("Dymocks").innerHTML = text.replace("Dymocks", "BookWorm"); //replace Dymocks with Bookworm
+        }
+
+        function uppercase() {
+            let text = document.getElementById("Uppercase").innerHTML;
+            document.getElementById("Uppercase").innerHTML = text.toUpperCase(); // Make string uppercase
+        }
     </script>
 
 
-    <button style="background-color: black; color: white;" onclick="length()">Calculate</button> 
 
 
-    </body>
-    </html>
-    
-    
+
+</body>
+
+</html>
