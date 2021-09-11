@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" /> <!-- telling browser to use UTF-8 character encoding -->
+
+  <title> BookWorm Books </title> 
+
+  <meta name="viewport" contents="width=device-width, initial-scale=1.0"> <!-- makes web page responsive-->
+  <link rel="stylesheet" type="text/css" href="./CSS/main.css">
+
+  <!-- used for menu icons hamburger icon, X and search -->
+  <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+
+</head>
+<!--Checkbox to see if hamburger menu has been clicked-->
+<input type="checkbox" id="check">
+
+<body>
+  <!-- Navigation Bar-->
+  <nav>
+    <div class="logo">
+      <img style="margin-bottom: -50px;" src="./images/logo.png" alt="" height="100px"> <!--Bookworm logo-->
+      BOOKWORM
+    </div>
+
+    <div class="search_box"> <!--search bar in the navigation bar-->
+      <input type="search" value="" id="search" placeholder="Type here to search..." onchange="findBook">
+      <button type="submit"><i class="fa fa-search"></i></button> 
+    </div>
+
+    <ol>
+      <!--Navigation links -->
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="books.html">BOOKS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="reviews.html">REVIEWS</a></li>
+
+    </ol>
+
+    <label for="check" class="bar">
+      <!--Use the font awesome kits bars (hamburger icon) and times(X) icon-->
+      <span class="fa fa-bars" id="bars"></span>
+      <span class="fa fa-times" id="times"></span>
+    </label>
+
+  </nav>
+  <div class="contact">
+    <script src="main.js"></script> <!--Link to main.js that has the google maps javascript function-->
+
+    <!--Contact form-->
+    <form  method="post" name="contact" id="contact" @submit.prevent="submitForm"> <!--Use submitForm method in Vue -->
+      <br>
+      <br>
+      <h2> Have a Question?</h2>
+      <h3>Lets Get in Touch!</h3>
+      <br>
+      <p>We value feedback from all our customers. We try to respond to your feeback within 2-3 bussiness days. Thank
+        you for your patience.</p>
+      <br>
+      <br>
+      <label>First name:</label>
+      <input type="text" name="firstname" id="firstname" v-model="firstname">   <!--Using V-model create two-way data binding with all the contact fields-->
+      <br>
+      <br>
+      <label>Last name:</label>
+      <input type="text" name="lastname" id="lastname" v-model="lastname">
+      <br>
+      <br>
+      <label>eMail Address:</label>
+      <input type="email" name="email" id="email" v-model="email">
+      <br>
+      <br>
+      <label>Phone Number:</label>
+      <input type="number" name="phone" id="phone" v-model="phone">
+      <br>
+      <br>
+      <label>Subject:</label>
+      <input type="text" name="subject" id="subject" v-model="subject">
+      <br>
+      <br>
+      <label></label>
+      <h3> Send us a message </h3>
+      <textarea cols="30" rows="10" placeholder="Type a message" name="message"  id="message" v-model="message"></textarea>
+      <br>
+      <br>
+      <input class="button" type="submit" name="Send" value="SEND" onclick="contactValidate()" />
+      <br>
+      <br>
+    </form>
+  </div>
+
+  
+  <!-- development version, includes helpful console warnings, Adding Vue JS --> 
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="contact.js" charset="utf-8"></script> <!-- linking vue instance -->
+
+
+  <!--Footer at the end of the webpage-->
+  <div class="footer">
+    <p>Bookworm © By using this website the user has agreed to all bookworms terms and conditions</p>
+    <br>
+    <p> Contact us </p>
+    <p>Mobile No. 0491 570 157</p>
+    <p>Tel. No. 1300 975 707</p>
+  </div>
+
+</body>
+
+</html>
