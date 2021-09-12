@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title> Task 3 Week 6</title>
+</head>
+
+<body>
+ 
+  <h1> Shipping Selection</h1>
+  <div id="shippingSelection">
+    <select v-model="selected">
+      <option v-for="option in options" v-bind:value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
+    <span>Selected: {{ selected }}</span> <!--Display selected option-->
+  </div>
+</body>
+
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="task3.js"></script>
+
+</html>

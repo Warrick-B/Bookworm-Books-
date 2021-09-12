@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title> Task 2 Week 6</title>
+</head>
+
+<body>
+ <h1>Additional Options (Optional)</h1>
+  <div id="optionSelection" class="optionSelection">  <!--Checkbox selection for the users to add addional option when placing an order -->
+    <input type="checkbox" id="Donate" value="Donate" v-model="checkedOptions"/> 
+    <label for="Donate">Donate $2 to the Smith foundation to literacy programs for disadvantaged students </label>
+    <br>
+    <input type="checkbox" id="Newsletter" value="Newsletter" v-model="checkedOptions" />
+    <label for="Newsletter">Subscribe to our weekly newsletter</label>
+    <br>
+    <input type="checkbox" id="Gift" value="Gift" v-model="checkedOptions" />
+    <label for="Gift">Gift wrap the book </label>
+    <br>
+    <br>
+    <span>Selected Options: {{ checkedOptions }}</span>
+  </div>
+</body>
+
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="task2.js"></script>
+
+</html>
