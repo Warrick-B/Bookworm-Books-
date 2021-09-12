@@ -12,11 +12,22 @@
   <h1>User Form</h1>
   <!--text-->
   <p>
+    <label>Name :</label>
     <input type="text" v-model="message">
-    {{message}}
+    <br>
+    <br>
+    <label>Password :</label>
+    <input type="password" v-model="password">
+    <br>
+    <br>
+    <label>email :</label>
+    <input type="email" v-model="email">
   </p>
   <p>
+
     <!---Checkbox-->
+    <br>
+    <br>
   <input type="checkbox" v-model="checked">
   {{checked ? "This button IS checked" : "This button IS NOT checked"}}
   </p>
@@ -36,7 +47,14 @@
     </select>
     {{selected}}
   </p>
+  <br>
+  <br>
+  <h2>Entered Data in the User form </h2>
+  <p><b>Name input box data:</b> {{message}}</p>
+  <p><b>Password input box data:</b> {{password}}</p>
+  <p><b>Email input box data:</b> {{email}}</p>
 </form>
+
 </body>
 
 <!-- development version, includes helpful console warnings -->
