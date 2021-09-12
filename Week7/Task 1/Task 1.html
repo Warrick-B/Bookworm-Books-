@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title> Task 1 Week 7</title>
+</head>
+
+<body>
+ <!--answerFAqs is is local therefore the answer message will not be displayed gloabally-->
+ <div id="bookWormFAQs"> <!-- Can use this component gloabally, if stop using it will still be included-->
+<global-faqs-component></global-faqs-component>
+<local-faqs-component></local-faqs-component> <!--this component wont show as it ned to be in the answerFAQs (local component) -->
+{{message}}
+</div>
+<!--Component-->
+<div id="answerFAQs"> <!--local component, if not using wont be inlcuded, saves data and resources, will show the FAQs answer  -->
+<local-faqs-component></local-faqs-component>
+</div>
+</body>
+
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="Task1.js"></script>
+
+</html>

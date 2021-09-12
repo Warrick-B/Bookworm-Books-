@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title> Task 3 Week 7</title>
+</head>
+
+<body>
+  <h1></h1>
+
+<div id="instantBookRecomendation">
+	<status-button-template></status-button-template>
+	<display-recommendation></display-recommendation>
+</div>
+
+<template id="vue-recommend-button-template">
+	<div>
+		<h2>Would you recommend this book</h2> <!--1st Vue Component-->
+		<p>Click the button below to recommend this book </p>
+		<button @click="sendRecommendSuccess"> Recommend </button> <!--Subscribe Emit event to Vue component 2-->
+	</div>
+</template>
+
+<template id="vue-recommend-overview-template">
+	<div>
+		<h2>Vue component 2</h2> <!--2nd Vue Component-->
+		<p>Listener: {{ successMessage }}</p>
+	</div>	
+</template>
+ </body>
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="task3.js"></script>
+
+</html>
