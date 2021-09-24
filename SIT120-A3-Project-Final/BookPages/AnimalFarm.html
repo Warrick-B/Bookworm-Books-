@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" /> <!-- telling browser to use UTF-8 character encoding -->
+
+  <title> BookWorm Books </title>
+
+  <meta name="viewport" contents="width=device-width, initial-scale=1.0"> <!-- makes web page responsive-->
+  <link rel="stylesheet" type="text/css" href="../CSS/main.css"><!-- link to CSS -->
+
+  <!-- used for menu icons hamburger icon, X and search -->
+  <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+
+</head>
+<!--Checkbox to see if hamburger menu has been clicked-->
+<input type="checkbox" id="check">
+
+<body>
+  <!-- Navigation Bar-->
+  <nav>
+
+    <div class="logo">
+      <!-- link to the home page when clicking on logo-->
+      <a href="../index.html" class="homeLink">
+        <img style="margin-bottom: -50px;" src="../images/logo.png" alt="" height="100px">
+        <!--Bookworm logo-->
+        BOOKWORM
+      </a>
+    </div>
+
+    <ol>
+      <!--Navigation links -->
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="../about.html">ABOUT</a></li>
+      <li><a href="../books.html">BOOKS</a></li>
+      <li><a href="../contact.html">CONTACT</a></li>
+      <li><a href="../reviews.html">REVIEWS</a></li>
+    </ol>
+
+    <label for="check" class="bar">
+      <!--Use the font awesome kits bars (hamburger icon) and times(X) icon-->
+      <span class="fa fa-bars" id="bars"></span>
+      <span class="fa fa-times" id="times"></span>
+    </label>
+
+  </nav>
+
+  <!-- Book Details-->
+  <div style="text-align: center;">
+    <br>
+    <br>
+    <!--Title, author, price and star rating-->
+    <h1>The Cellist</h1>
+    <h2>Author: Daniel Silva</h2>
+    <br>
+    <h3>Price: $19.99 </h3>
+    <br>
+    <img class="detailsImg" src="../images/books/AnimalFarm.jpg">
+    <br>
+    <br>
+    <h2>Rating</h2>
+    <img class="starsImg" src="../images/5stars.jpg">
+
+    <!--Book Description -->
+    <h2>Description</h2>
+    <br>
+    <p class="textCenter">'All animals are equal. But some animals are more equal than others.' Mr Jones of Manor Farm
+      is so lazy and drunken that one day he forgets to feed his livestock.
+      The ensuing rebellion under the leadership of the pigs Napoleon and Wellington leads to the animals taking over
+      the farm. Vowing to eliminate the terrible inequities of the farmyard,
+      the renamed Animal Farm is organized to benefit all who walk on four legs. But as time passes, the ideals of the
+      rebellion are corrupted, then forgotten. And something new and
+      unexpected emerges... Animal Farm - the history of a revolution that went wrong - is George Orwell's brilliant
+      satire on the corrupting influence of power. 'Remains our great satire
+      of the darker face of modern history' - Malcolm Bradbury 'Animal Farm has seen off all the opposition. It's as
+      valid today as it was fifty years ago'
+    </p>
+    <br>
+    <br>
+    <!--Order Button-->
+    <form action="../order.html">
+      <button class="button" type="submit">BUY</button>
+    </form>
+    <br>
+    <br>
+  </div>
+
+  <!--Footer at the end of the webpage-->
+  <div class="footer">
+    <img src="../images/bookfooter.png" style="height: 100px" width="100%">
+    <p>Bookworm © By using this website the user has agreed to all bookworms terms and conditions</p>
+    <br>
+    <a href="../sitemap.html">SITE MAP</a>
+    <br>
+    <br>
+    <p> Contact us </p>
+    <p>Tel. No. 1300 975 707</p>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,536 @@
+/* using google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+
+/* apply to all get rid of all defualt padding and margins*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+/* body styles*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+
+/* button style throughout the webpage*/
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: darkred;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    width: 150px;
+    cursor: pointer;
+    margin: 1px;
+  }
+
+/*Circle button for quiz*/
+  .buttonRound {
+    background-color: darkred; 
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px
+  }
+  
+
+/* Navagation bar*/
+nav{
+    display: flex;
+    width: 100%;
+    background: darkred;
+    position: relative; 
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 30px;
+}
+
+/* formating logo text (BookWorm)*/
+nav .logo{
+    font-size: 40px; 
+    font-weight: 800;
+    color: white;
+    
+}
+
+nav .homeLink{
+  color: white;
+  text-decoration: none;
+}
+
+/*format search box in the navigation bar*/
+
+nav .search_box{
+    display: flex;
+    margin: auto 0;
+    line-height: 30px;
+    height: 35px;
+}
+
+nav .search_box input{
+    border:none;
+    outline: none;
+    background: white;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 16px;
+    width: 250px;
+}
+
+nav .search_box button:hover {
+    background: darkgray;
+    border: 1px solid darkgray;
+    
+}
+
+
+/* Style the submit button in the search box */
+nav .search_box button {
+    float: left;
+    width: 15%;
+    padding: 10px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    border: 1px solid black;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+
+/* formating the list of navagation links*/
+nav ol{
+    display: flex;
+    list-style: none;
+    margin: auto 0;
+}
+
+nav ol li{
+    margin: 0 4px;
+}
+
+nav ol li a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+}
+
+
+/*when pointer hovers over the link change background and text colour*/
+
+nav ol li:hover a{
+    background: white;
+    color: Black;
+}
+
+nav .bar{
+ position: relative;
+ margin: auto;
+ display: none;
+}
+
+nav .bar span{
+    position: absolute;
+    color: white;
+    font-size: 20px;
+}
+
+/*make check box invisable */ 
+input[type="checkbox"]{ 
+    -webkit-appearance: none;
+    display: none;
+}
+
+/*media query to collpase navigation bar to fit the screen
+and make adjustments to the navigation bar to fit the screen*/
+
+@media screen and (max-width:1100px){
+    nav{
+        display: block;
+        padding: 0;
+    }
+
+    nav .logo{
+        display: inline-block;
+        padding: 15px 30px;
+    }
+
+    nav .search_box{
+        width: 75% ;
+        display: inline-flex;
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 12px ;
+    }
+
+    nav ol{
+        display: flex;
+        flex-direction: column;
+        background: grey;
+        height: 0;
+        visibility: hidden;
+        transition: 0.2s;
+        
+
+    }
+
+    nav ol li{
+        text-align: center ;
+        transition: 0.2s 0.1s all;
+        opacity: 0;
+    }
+
+    nav ol li a{
+        color: white;
+        font-size: 20px;
+        padding: 15px;
+        display: block;
+    }
+
+    /* stagger links so when collpase they will look like they slide in*/
+    nav ol li:nth-child(1){
+        transform: translateX(-100px);
+    }
+
+    nav ol li:nth-child(2){
+        transform: translateX(-150px);
+    }
+
+    nav ol li:nth-child(3){
+        transform: translateX(-200px);
+    }
+
+    nav ol li:nth-child(4){
+        transform: translateX(-250px);
+    }
+
+    nav ol li:nth-child(5){
+        transform: translateX(-300px);
+    }
+    
+    
+    /* format the hamburger and X icons to to to the top right, and only display the required icon */
+    nav .bar{
+        display: block;
+        position: absolute ;
+        top: 20px ;
+        right: 80px ;
+        cursor: pointer;
+    }
+
+    nav .bar #times{
+        display: none;
+    }
+
+    #check:checked ~ nav .bar #times{
+        display: block;
+    }
+    
+    #check:checked ~ nav .bar #bars{
+        display: none;
+    }
+
+    /* background of drop down menu */
+    #check:checked ~ nav ol{
+        visibility: visible;
+        height: 265px;
+    }
+
+
+    /*slide in links*/
+    #check:checked ~ nav ol li:nth-child(1),
+    #check:checked ~ nav ol li:nth-child(2),
+    #check:checked ~ nav ol li:nth-child(3),
+    #check:checked ~ nav ol li:nth-child(4),
+    #check:checked ~ nav ol li:nth-child(5){
+        transform: translateX(0);
+        opacity: 0.8;
+    }
+
+
+}
+
+/*welcome div style , make background image darker so that white text is easily read*/
+
+.welcome{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner.jpg")
+}
+
+/* div container for the product cards formating*/
+.container{
+    width:90%;
+    padding-top: 20px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+}
+
+/* product card formating*/
+.container .card{
+    width: 270px;
+    padding-top: 8px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 20px;
+    border: solid darkred;
+    border-radius: 16px;
+    box-shadow: 0 0 8px black;
+}
+
+/*make card bigger when hovering */
+.container .card:hover{  
+  transform: scale(1.1);
+
+}
+
+/* product card image formating*/
+.container .card .book-image{
+    width: 230px;
+    margin: 20px auto;
+    height: 350px;
+}
+
+.container .card .book-image img{
+    width: 100%
+}
+
+.container .card .book-image img:hover{
+    cursor: pointer;
+}
+
+/* product card heading style*/
+.container .card .book-info h4{
+    font-size: 20px;
+    padding: 0 24px;
+    margin-bottom: 4px;
+}
+
+/* product card heading style*/
+.container .card .product-button{
+    width: 100%;
+    transition: 0.5s;
+}
+
+/* product card button style*/
+.container .card .product-button button{
+    width: 100%;
+    padding: 8px;
+    background: darkred ;
+    border:1px solid gray;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 0 0 16px 16px;
+
+}
+
+/* formating the footer */
+.footer {
+    background-color: black;
+    flex: 0 0 50px;
+    text-align: center;
+    color: white;
+    margin-top: auto;
+    font-size: 16px;
+  }
+
+/*site map link colour */ 
+  .footer a {
+    color: white;
+  }
+  
+/* contact form style */
+  .contact
+  {
+      text-align: center;
+  }
+
+  /* map div style */
+  #map {
+    margin: auto;
+    width: 50%;
+    height: 400px;
+    border: 2px solid black;
+  }
+
+/*  Two columns side by side */
+  .column {
+      float: left;
+      width: 50%;
+      padding: 12px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+/*columns will stacked upon each other when the screens gets to a certain amount, making it responsive*/
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+
+  /*Social media links remove underlie*/
+  .sociallinks{
+    text-decoration: none;
+  }
+
+
+/*Book Search styling on books page starts here*/
+
+/*Formatting container div of the search function*/
+  div#booksearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  /*Formatting input box and heading of the search function */
+  div#booksearch .search-wrapper {
+    position: relative;
+  }
+ 
+  div#booksearch .search-wrapper input {
+    padding: 4px 12px;
+    border: 1px solid black;
+    transition: 0.15s all ease-in-out;
+    background: white;
+    font-size: 16px;
+  }
+
+/*Apply transition when the book search box is clicked on*/
+  div#booksearch .search-wrapper input:focus {
+    outline: none;
+    transform: scale(1.15);
+  }
+
+
+  /*wrapper used to format the disaply of the book catalogue (5x3 grid)*/
+  div#booksearch .book-wrapper {
+    display: flex;
+    max-width: 70%;
+    flex-wrap: wrap;
+    padding-top: 14px;
+    padding-left: 40px;
+  }
+
+/* book product card used to display book in the search function */
+  div#booksearch .bookcard {
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+    border: 4px solid darkred;
+    border-radius: 16px;
+    height: 430px;
+    width: 230px;
+    margin: 12px;
+    transition: 0.15s all ease-in-out;
+  }
+
+/* when hovering over enlarge book product card */
+  div#booksearch .bookcard:hover {
+    transform: scale(1.1);
+  }
+
+/* formatting for the link in the book card */
+  div#booksearch .bookcard a {
+    text-decoration: none;
+    padding: 12px;
+    color: black;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  /* formatting for the book cover image in the book card */
+  div#booksearch .bookcard a img {
+    height: 250px;
+  }
+
+  /* small tag formatting used to provide smaller font in the book cards */
+  div#booksearch .bookcard a small {
+    font-size: 16px;
+    padding: 4px;
+  }
+
+  /*Book Search styling on books page ends here*/
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+   .reviewCenter {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+   
+  }
+
+  .textCenter {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    text-align: justify;
+    text-justify: inter-word;
+    
+  }
+
+  .detailsImg{
+    width: 300px ;
+    height: 450px ;
+  }
+
+  .starsImg{
+    width: 15% ;
+  }
+
+
+/* make all labels appear above the field on the form, maming them inline with each other */
+  label {
+    display: block;
+  }
+
+/*Style for input boxes */
+  input {
+     padding: 5px 18px;
+     margin: 4px 0;
+     box-sizing: border-box;
+     border: 0.5px solid black;
+     border-radius: 4px;
+  }
+
+/*Style for text areas */
+textarea{
+  box-sizing: border-box;
+   border: 0.5px solid black;
+   }
+      

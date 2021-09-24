@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" /> <!-- telling browser to use UTF-8 character encoding -->
+
+  <title> BookWorm Books </title>
+
+  <meta name="viewport" contents="width=device-width, initial-scale=1.0"> <!-- makes web page responsive-->
+  <link rel="stylesheet" type="text/css" href="../CSS/main.css"><!-- link to CSS -->
+
+  <!-- used for menu icons hamburger icon, X and search -->
+  <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+
+</head>
+<!--Checkbox to see if hamburger menu has been clicked-->
+<input type="checkbox" id="check">
+
+<body>
+  <!-- Navigation Bar-->
+  <nav>
+
+    <div class="logo">
+      <!-- link to the home page when clicking on logo-->
+      <a href="../index.html" class="homeLink">
+        <img style="margin-bottom: -50px;" src="../images/logo.png" alt="" height="100px">
+        <!--Bookworm logo-->
+        BOOKWORM
+      </a>
+    </div>
+    <ol>
+      <!--Navigation links -->
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="../about.html">ABOUT</a></li>
+      <li><a href="../books.html">BOOKS</a></li>
+      <li><a href="../contact.html">CONTACT</a></li>
+      <li><a href="../reviews.html">REVIEWS</a></li>
+    </ol>
+
+    <label for="check" class="bar">
+      <!--Use the font awesome kits bars (hamburger icon) and times(X) icon-->
+      <span class="fa fa-bars" id="bars"></span>
+      <span class="fa fa-times" id="times"></span>
+    </label>
+
+  </nav>
+
+  <!-- Book Details-->
+  <div style="text-align: center;">
+    <br>
+    <br>
+    <!--Title, author, price and star rating-->
+    <h1>Bleak House</h1>
+    <h2>Author: Charles Dickens</h2>
+    <br>
+    <h3>Price: $14.99</h3>
+    <br>
+    <img class="detailsImg" src="../images/books/BleakHouse.jpg">
+    <br>
+    <br>
+    <h2>Rating</h2>
+    <img class="starsImg" src="../images/1star.jpg">
+
+    <!--Book Description -->
+    <h2>Description</h2>
+    <br>
+    <p class="textCenter">As the interminable case of Jarndyce and Jarndyce grinds its way through the Court of
+      Chancery, it draws together a disparate group of people Adaand Richard Clare, whose inheritance is gradually
+      being devoured by legal costs; Esther Summerson, a ward ofcourt, whose parentage is a source of deepening mystery;
+      the menacing lawyer Tulkinghorn; the determined sleuth Inspector Bucket; and even Jo, the destitute little
+      crossing sweeper.
+      A savage, but often comic, indictment of a society that is rotten to the core, Bleak House is one of Dickens's
+      most ambitious novels,
+      with a range that extends from the drawing rooms of the aristocracy to the poorest of London slums. This edition
+      follows the first
+      edition in book form on 1853. Terry Eagleton's preface examines characterisation and considers Bleak House as an
+      early work of
+      detective fiction.
+    </p>
+    <br>
+    <br>
+    <!--Order Button-->
+    <form action="../order.html">
+      <button class="button" type="submit">BUY</button>
+    </form>
+    <br>
+    <br>
+
+  </div>
+
+  <!--Footer at the end of the webpage, containing site map link-->
+  <div class="footer">
+    <img src="../images/bookfooter.png" style="height: 100px" width="100%">
+    <p>Bookworm © By using this website the user has agreed to all bookworms terms and conditions</p>
+    <br>
+    <a href="../sitemap.html">SITE MAP</a>
+    <br>
+    <br>
+    <p> Contact us </p>
+    <p>Tel. No. 1300 975 707</p>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" /> <!-- telling browser to use UTF-8 character encoding -->
+
+  <title> BookWorm Books </title>
+
+  <meta name="viewport" contents="width=device-width, initial-scale=1.0"> <!-- makes web page responsive-->
+  <link rel="stylesheet" type="text/css" href="./CSS/main.css"><!-- link to CSS -->
+
+  <!-- used for menu icons hamburger icon, X and search -->
+  <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+
+</head>
+<!--Checkbox to see if hamburger menu has been clicked-->
+<input type="checkbox" id="check">
+
+<body>
+  <!-- Navigation Bar-->
+  <nav>
+
+    <div class="logo">
+      <!-- link to the home page when clicking on logo-->
+      <a href="index.html" class="homeLink">
+        <img style="margin-bottom: -50px;" src="./images/logo.png" alt="" height="100px">
+        <!--Bookworm logo-->
+        BOOKWORM
+      </a>
+    </div>
+
+    <ol>
+      <!--Navigation links -->
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="books.html">BOOKS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="reviews.html">REVIEWS</a></li>
+
+    </ol>
+
+    <label for="check" class="bar">
+      <!--Use the font awesome kits bars(hamburger icon) and times(X) icon-->
+      <span class="fa fa-bars" id="bars"></span>
+      <span class="fa fa-times" id="times"></span>
+    </label>
+
+  </nav>
+
+  <!--About description-->
+  <div style="text-align: center;">
+    <br>
+    <br>
+    <h1>Who are we?</h1>
+    <br>
+    <p>Here at Bookworm we are a family owned and run business that have selling new and second hand books to the
+      greater Burrwood community for almost 20 years!</p>
+    <p> We are currently located at the Burwood One Shopping Centre , 172-210 Burwood Hwy, Burwood East VIC 3151. Our
+      shop is on level 1 shop number 13</p>
+    <br>
+  </div>
+
+  <div id="map">
+    <!--Google map goes here-->
+  </div>
+
+  <div class="row">
+    <br>
+    <!--column 1 div containing social media icons-->
+    <div class="column">
+      <h2>Follow us on social media</h2>
+      <br>
+      <!-- opening social media links in a new tab (right now just home page of the sites) when clicked on the social media icon-->
+      <a class="sociallinks" href="https://www.facebook.com/" target="_blank" ;>
+        <img src="./images/facebook.png" alt="facebook" height="75px">
+      </a>
+      <a class="sociallinks" href="https://www.instagram.com/" target="_blank">
+        <img src="./images/instagram.png" alt="instagram" height="75px">
+      </a>
+      <a class="sociallinks" href="https://twitter.com/" target="_blank">
+        <img src="./images/twitter.png" alt="twitter" height="75px">
+      </a>
+      <a class="sociallinks" href="https://www.pinterest.com.au/" target="_blank">
+        <img src="./images/pinterest.png" alt="pinterest" height="75px">
+      </a>
+    </div>
+
+    <!--column 2 div containing table with opening times-->
+    <div class="column">
+      <br>
+      <h2>Opening Hours</h2>
+      <br>
+      <!--Table width 100% to fill entire column-->
+      <table style="width:100%">
+        <tr>
+          <th>Day</th>
+          <th>Time</th>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td>08:00 - 17:00</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>08:00 - 17:00</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>07:00 - 17:00</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>07:00 - 15:00</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>09:00 - 18:00</td>
+        </tr>
+        <tr>
+          <td>Saturday</td>
+          <td>10:00 - 13:00</td>
+        </tr>
+        <tr>
+          <td>Sundday</td>
+          <td>Closed</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <!--Link to main.js that has the googlemaps javascript fucntion-->
+
+  <!--Below is the key for google maps API-->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFnzsefRCrr27hZIXPByUx2zDKHyaN5OQ&callback=initMap">
+  </script>
+
+  <!--Footer at the end of the webpage, containing site map link-->
+  <div class="footer">
+    <img src="./images/bookfooter.png" style="height: 100px" width="100%">
+    <p>Bookworm © By using this website the user has agreed to all bookworms terms and conditions</p>
+    <br>
+    <a href="sitemap.html">SITE MAP</a>
+    <br>
+    <br>
+    <p> Contact us </p>
+    <p>Tel. No. 1300 975 707</p>
+  </div>
+
+</body>
+
+</html>
