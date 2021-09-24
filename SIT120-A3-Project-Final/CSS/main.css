@@ -394,7 +394,6 @@ and make adjustments to the navigation bar to fit the screen*/
     }
   }
 
-
   /*Social media links remove underlie*/
   .sociallinks{
     text-decoration: none;
@@ -481,6 +480,7 @@ and make adjustments to the navigation bar to fit the screen*/
 
   /*Book Search styling on books page ends here*/
 
+  /* Center class divs to make text centered */
   .center {
     display: flex;
     justify-content: center;
@@ -503,16 +503,16 @@ and make adjustments to the navigation bar to fit the screen*/
     text-justify: inter-word;
     
   }
-
+/* Book cover Image on the book details page to keep same size across of book pages */
   .detailsImg{
     width: 300px ;
     height: 450px ;
   }
 
+/* Review Stars Image on the book details page to keep same size across of book pages */
   .starsImg{
     width: 15% ;
   }
-
 
 /* make all labels appear above the field on the form, maming them inline with each other */
   label {
